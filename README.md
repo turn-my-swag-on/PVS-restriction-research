@@ -38,7 +38,7 @@ pvs-amplified-research/
 * Plugin uses **only public SourceMod/SDK natives**.
 * No engine-level modifications, VAC bypass, or protected memory access.
 * Intended for research, testing, and concept demonstration only.
-* Suitable for sharing with anti-cheat teams like FACEIT or Valve.
+* Suitable for sharing for anti-cheat purposes.
 
 ## Contributing
 
@@ -68,4 +68,4 @@ Compress-Archive -Path pvs-amplified-research -DestinationPath pvs-amplified-res
 Expand-Archive -Path pvs-amplified-research.zip -DestinationPath C:\temp\unzip_test -Force
 ```
 
-This creates `pvs-amplified-research.zip` with the complete folder structure, ready to provide to FACEIT or other anti-cheat research teams.
+This creates `pvs-amplified-research.zip` with the complete folder structure, ready to be tested.
