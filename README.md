@@ -4,8 +4,6 @@
 
 This repository demonstrates a safe, research-oriented approach to server-side visibility tracking for CS2 using SourceMod 1.12. The goal is to show how a server can manage spotted enemies and reduce the potential impact of radar cheats without modifying the engine or VAC.
 
-> ⚠️ This project is a research/demo. It **does not** patch the game, VAC, or bypass anti-cheat systems.
-
 ## Repository Contents
 
 ```
