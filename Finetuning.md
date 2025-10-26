@@ -70,11 +70,3 @@ This guide provides detailed instructions for fine-tuning the server-side visibi
 * **Standard 64-tick Subtick:** Check Interval 0.12s, Broadcast 0.25s, Max Samples 4, Max Checks 256, Spot Expiry 2.5s, Distance Cull 1400, FOV Cos 0.45
 * **Light Load:** Check Interval 0.14s, Broadcast 0.28s, Max Samples 3, Max Checks 128, Spot Expiry 2.0s, Distance Cull 1200, FOV Cos 0.4
 * **High Accuracy Test:** Check Interval 0.10s, Broadcast 0.22s, Max Samples 5, Max Checks 384, Spot Expiry 3.5s, Distance Cull 1500, FOV Cos 0.5
-
-## Checklist Before Sharing with FACEIT
-
-* Compile against exact SourceMod/CS2 build.
-* Run private match tests with logs and packet captures.
-* Strip admin/debug outputs.
-* Include a summary describing shared data and privacy measures.
-* Provide sample logs and metrics demonstrating performance and correctness.
