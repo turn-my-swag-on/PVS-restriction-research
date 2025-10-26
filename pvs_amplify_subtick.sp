@@ -9,7 +9,7 @@
 public Plugin:myinfo = 
 {
     name = "Turn-my-swag-on",
-    author = "Turn-my-swag-on"",
+    author = "Turn-my-swag-on",
     description = "Server-side LOS-based spotting plugin for CS2 (64Hz subtick adapted, research-safe).",
     version = "1.0",
     url = "https://github.com/turn-my-swag-on/PVS-restriction-research/"
