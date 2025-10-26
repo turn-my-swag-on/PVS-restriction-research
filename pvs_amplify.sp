@@ -21,8 +21,8 @@
 public Plugin myinfo =
 {
     name = "PVS Amplified (tight)",
-    author = "Example",
-    description = "Server-side LOS-based spotted system (no telemetry)",
+    author = "turn-my-swag-on",
+    description = "Server-side LOS-based spotted system",
     version = "1.0"
 };
 
