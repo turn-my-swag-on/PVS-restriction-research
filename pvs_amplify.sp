@@ -14,7 +14,7 @@ public Plugin myinfo =
     name = "PVS Amplified (tight)",
     author = "turn-my-swag-on",
     description = "Server-side LOS-based spotted system, 64Hz optimized",
-    version = "1.1"
+    version = "1.2"
 };
 
 /* == Configurable CVars == */
@@ -97,7 +97,7 @@ public Action Timer_CheckLOS(Handle timer)
             if (dist2 > Pow(GetConVarFloat(gCvar_DistanceCull),2)) continue;
 
             float toTarget[3] = { tOrigin[0]-vEye[0], tOrigin[1]-vEye[1], tOrigin[2]-vEye[2] };
-            NormalizeVector(toTarget);
+            SDKTools_NormalizeVector(toTarget);
             if (DotProduct(vForward,toTarget)<GetConVarFloat(gCvar_FOVCull)) continue;
 
             if (gCachedVisibility[viewer][target] > now)
@@ -186,7 +186,7 @@ void GetClientForwardVector(int client, float out[3])
     out[0] = Cos(pitch)*Cos(yaw);
     out[1] = Cos(pitch)*Sin(yaw);
     out[2] = -Sin(pitch);
-    NormalizeVector(out);
+    SDKTools_NormalizeVector(out);
 }
 
 float GetVectorDistanceSquared(float a[3], float b[3])
@@ -226,14 +226,7 @@ public bool TraceFilter(int entIndex, int contentsMask, any data)
     return entIndex != data;
 }
 
-void NormalizeVector(float v[3])
-{
-    float len = SquareRoot(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
-    if (len<0.00001) { v[0]=1.0; v[1]=0.0; v[2]=0.0; return; }
-    v[0]/=len; v[1]/=len; v[2]/=len;
-}
-
-/* === Team spotting helpers (Mark, Expire, Remove) === */
+/* === Team spotting helpers === */
 public void MarkTeamSpotted(int team,int enemy,float now,float expiryDuration)
 {
     if (team<=0) return;
